@@ -89,7 +89,6 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [imageLoaded, setImageLoaded] = useState<{ [key: number]: boolean }>({});
   
   // Filter out any invalid image URLs and ensure we have valid images
   const validImages = images && images.length > 0 
@@ -172,38 +171,7 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
     }
   }, [allImages.length, activeIndex]);
 
-  // Initialize image loaded state and preload first image
-  useEffect(() => {
-    setImageLoaded({});
-    // Preload the first image immediately
-    if (allImages.length > 0 && allImages[0]) {
-      const img = new Image();
-      img.onload = () => {
-        handleImageLoad(0);
-        console.log('Image loaded successfully:', allImages[0]);
-      };
-      img.onerror = () => {
-        console.log('Image failed to load, marking as loaded anyway:', allImages[0]);
-        handleImageLoad(0); // Mark as loaded even if error
-      };
-      img.src = allImages[0];
-      
-      // Fallback timeout - mark as loaded after 5 seconds
-      setTimeout(() => {
-        if (!imageLoaded[0]) {
-          console.log('Image loading timeout, forcing load state');
-          handleImageLoad(0);
-        }
-      }, 5000);
-    }
-  }, [allImages]);
-
-  const handleImageLoad = (index: number) => {
-    setImageLoaded(prev => ({
-      ...prev,
-      [index]: true
-    }));
-  };
+  // No complex loading state needed - images will load naturally
 
   // Safety check - ensure we have images to display
   if (!allImages || allImages.length === 0) {
@@ -239,20 +207,11 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
               src={allImages[activeIndex]} 
               alt={`Featured project image`}
               className="w-full h-[400px] sm:h-[500px] object-cover transition-all duration-300 rounded-2xl"
-              onLoad={() => handleImageLoad(activeIndex)}
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = projectImages[0];
-                handleImageLoad(activeIndex); // Mark as loaded even if fallback
               }}
             />
-            
-            {/* Loading skeleton - only show if image hasn't loaded yet */}
-            {!imageLoaded[activeIndex] && allImages[activeIndex] && (
-              <div className="absolute inset-0 bg-gray-800 animate-pulse rounded-2xl flex items-center justify-center">
-                <div className="text-gray-400">Loading image...</div>
-              </div>
-            )}
             
             {/* Navigation arrows */}
             <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -302,11 +261,11 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
               </Button>
             </div>
             
-            {/* Enhanced image counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium border border-white/10">
-                <span className="text-steel">{activeIndex + 1}</span>
-                <span className="mx-2 text-gray-300">/</span>
+            {/* Image counter - always visible */}
+            <div className="absolute bottom-4 right-4">
+              <div className="bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-white text-sm font-medium border border-white/20">
+                <span className="text-steel font-bold">{activeIndex + 1}</span>
+                <span className="mx-1 text-gray-300">/</span>
                 <span>{allImages.length}</span>
               </div>
             </div>
