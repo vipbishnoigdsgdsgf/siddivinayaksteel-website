@@ -99,15 +99,9 @@ export default function SpecificFeaturedProjects() {
                     <span className="text-white font-medium text-base">{project.rating.toFixed(1)}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="border-steel/40 hover:border-steel"
-                      onClick={() => window.open('https://jsdl.in/DT-283E5AIMN4P', '_blank', 'noopener')}
-
-                    >
-                      <span className="text-sm">Schedule</span>
-                    </Button>
+                    <span className="text-steel/70 text-sm font-medium px-3 py-1 bg-steel/10 rounded-md">
+                      Premium Quality
+                    </span>
                   </div>
                 </div>
               </div>
