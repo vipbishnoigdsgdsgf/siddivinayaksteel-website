@@ -178,9 +178,23 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
     // Preload the first image immediately
     if (allImages.length > 0 && allImages[0]) {
       const img = new Image();
-      img.onload = () => handleImageLoad(0);
-      img.onerror = () => handleImageLoad(0); // Mark as loaded even if error
+      img.onload = () => {
+        handleImageLoad(0);
+        console.log('Image loaded successfully:', allImages[0]);
+      };
+      img.onerror = () => {
+        console.log('Image failed to load, marking as loaded anyway:', allImages[0]);
+        handleImageLoad(0); // Mark as loaded even if error
+      };
       img.src = allImages[0];
+      
+      // Fallback timeout - mark as loaded after 5 seconds
+      setTimeout(() => {
+        if (!imageLoaded[0]) {
+          console.log('Image loading timeout, forcing load state');
+          handleImageLoad(0);
+        }
+      }, 5000);
     }
   }, [allImages]);
 
