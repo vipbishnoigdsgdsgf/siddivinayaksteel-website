@@ -1,77 +1,59 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# 🏗️ Siddhi Vinayak Steel Website
 
-## Project info
+**Fresh Clean Repository** - Complete Modern Website for Premium Steel & Glass Fitting Services
 
-**URL**: https://lovable.dev/projects/492acd50-9f8c-4cd6-b8f1-2cf16c821bc7
+🌟 **Live Website:** [siddivinayaksteel.shop](https://siddivinayaksteel.shop)  
+🚀 **Repository:** [siddivinayaksteel-website](https://github.com/vipbishnoigdsgdsgf/siddivinayaksteel-website)  
+👤 **Owner:** vipbishnoigdsgdsgf
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 🎨 **Modern Design** - Premium UI/UX with responsive layout
+- 📱 **Mobile Optimized** - Perfect experience on all devices  
+- 🖼️ **Gallery System** - Multi-image upload (2-4 images per project)
+- 💬 **WhatsApp Integration** - Direct customer communication
+- 🔐 **Admin Panel** - Complete management system
+- ⚡ **Performance Optimized** - Fast loading and smooth experience
+- 🎯 **SEO Ready** - Search engine optimized
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/492acd50-9f8c-4cd6-b8f1-2cf16c821bc7) and start prompting.
+- **Frontend:** React + TypeScript + Vite
+- **Styling:** Tailwind CSS + shadcn/ui
+- **Backend:** Supabase (Database + Auth + Storage)
+- **Deployment:** Vercel
+- **Icons:** Lucide React
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Quick Start
 
-**Use your preferred IDE**
+```bash
+# Clone repository
+git clone https://github.com/vipbishnoigdsgdsgf/siddivinayaksteel-website.git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Navigate to project
+cd siddivinayaksteel-website
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📞 Contact Integration
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **WhatsApp:** +91 9326698359
+- **Email:** info@siddivinayakasteel.shop
+- **Location:** Hyderabad, Telangana
 
-**Use GitHub Codespaces**
+## 🎯 Key Components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Gallery System** - Multi-image projects with categories
+- **Project Pages** - Detailed view with lightbox gallery
+- **Contact Forms** - Direct inquiries and meeting booking
+- **Admin Dashboard** - Content and user management
+- **Authentication** - Secure user login/signup
 
-## What technologies are used for this project?
+---
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/492acd50-9f8c-4cd6-b8f1-2cf16c821bc7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-=======
-# siddhi-vinayak-steel-website
->>>>>>> 5668dba7335293b358b448d512f74fa6b78c9a48
+**Built with ❤️ by VIP Bishnoi for Siddhi Vinayak Steel**
