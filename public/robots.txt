@@ -1,0 +1,51 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Robots.txt for Siddhi Vinayak Steel Website
+# Optimized for Google, Bing, and other search engines
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /dist/
+
+# Allow specific important pages
+Allow: /services/
+Allow: /portfolio/
+Allow: /gallery/
+Allow: /about/
+Allow: /contact/
+Allow: /projects/
+Allow: /testimonials/
+
+# Sitemap location
+Sitemap: https://siddivinayakasteel.shop/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 0
+
+# Bing-specific directives  
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1

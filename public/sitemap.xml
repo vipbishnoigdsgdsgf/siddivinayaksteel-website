@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://siddivinayakasteel.shop/assets/profilebanner.jpg</image:loc>
+      <image:caption>Siddhi Vinayak Steel - Premium Steel Fitting Services in Mumbai</image:caption>
+      <image:title>Steel Fabrication Services Mumbai</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/about</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/services</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Portfolio Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/portfolio</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/gallery</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://siddivinayakasteel.shop/assets/Steel and Glass Staircase.jpeg</image:loc>
+      <image:caption>Steel and Glass Staircase Installation by Siddhi Vinayak Steel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://siddivinayakasteel.shop/assets/Stainless Steel Railing for Luxury Villa.jpeg</image:loc>
+      <image:caption>Stainless Steel Railing Installation for Luxury Villa</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/contact</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/testimonials</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Project Pages -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/projects/steel-fabrication</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://siddivinayakasteel.shop/projects/glass-installation</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://siddivinayakasteel.shop/projects/stainless-steel-railings</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Meeting Registration -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/register-meeting</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Login/Register -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/login</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://siddivinayakasteel.shop/register</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Privacy & Terms -->
+  <url>
+    <loc>https://siddivinayakasteel.shop/privacy-policy</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://siddivinayakasteel.shop/terms-of-service</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://siddivinayakasteel.shop/cookie-policy</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
