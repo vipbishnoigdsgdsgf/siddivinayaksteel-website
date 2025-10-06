@@ -1,4 +1,3 @@
-
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
@@ -14,7 +13,6 @@ import './utils/schemaCheck'
 
 // Global error handler to prevent blank screens and suppress wallet errors
 window.addEventListener('error', (event) => {
-  // Suppress specific wallet errors
   if (event.error?.message?.includes('wallet must has at least one account') ||
       event.error?.code === 4001 ||
       event.filename?.includes('inpage.js')) {
@@ -26,7 +24,6 @@ window.addEventListener('error', (event) => {
   
   console.error('Global error caught:', event.error);
   
-  // Only show error UI if we're getting a blank screen
   if (document.body.children.length === 0 || 
       (document.getElementById('root')?.children.length === 0)) {
     
@@ -47,13 +44,10 @@ window.addEventListener('error', (event) => {
     document.body.appendChild(errorDiv);
   }
   
-  // Let the error propagate so it can be logged (unless suppressed above)
   return false;
 });
 
-// Additional error suppression for unhandled promise rejections
 window.addEventListener('unhandledrejection', (event) => {
-  // Suppress specific wallet promise rejections
   if (event.reason?.message?.includes('wallet must has at least one account') ||
       event.reason?.code === 4001) {
     console.warn('Wallet promise rejection suppressed:', event.reason);
@@ -64,12 +58,42 @@ window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled promise rejection:', event.reason);
 });
 
+// --------------------
+// GOOGLE TAG (GA4 + Ads) - Inject Script Safely
+// --------------------
+function injectGoogleTag() {
+  // Avoid duplicate injection
+  if (document.getElementById('google-gtag')) return;
+
+  // Add gtag.js script
+  const script = document.createElement('script');
+  script.id = 'google-gtag';
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17621947358';
+  document.head.appendChild(script);
+
+  // Add inline gtag config
+  const inline = document.createElement('script');
+  inline.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17621947358');
+  `;
+  document.head.appendChild(inline);
+}
+
+// Inject Google Tag before App render
+injectGoogleTag();
+
+// --------------------
+// App Render
+// --------------------
 try {
   createRoot(document.getElementById("root")!).render(<App />);
 } catch (error) {
   console.error('Failed to render application:', error);
   
-  // Provide a fallback UI when render fails
   const rootElement = document.getElementById('root');
   if (rootElement) {
     rootElement.innerHTML = `
