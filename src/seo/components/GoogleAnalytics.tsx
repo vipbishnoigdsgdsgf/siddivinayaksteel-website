@@ -19,7 +19,7 @@ interface GoogleAnalyticsProps {
 }
 
 const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({
-  trackingId = "", // Will use GTM instead
+  trackingId = "G-0LGW64FRDW", // Will use GTM instead
   searchConsoleVerification = "your-search-console-verification-code", // Replace with actual verification code
   gtmId = "GTM-TRLVR64P" // Your actual GTM ID
 }) => {
