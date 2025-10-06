@@ -1,29 +1,26 @@
-User-agent: Googlebot
-Allow: /
+# 🚀 Siddhi Vinayak Steel - Advanced Robots.txt
+# Author: Viaks (with Nobi 😎)
+# Purpose: Allow search engines full crawl access, block sensitive/internal dirs
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-# Robots.txt for Siddhi Vinayak Steel Website
-# Optimized for Google, Bing, and other search engines
-
+# ===============================
+# ✅ Global Rules (All Bots)
+# ===============================
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
-Disallow: /.env
-Disallow: /src/
 Disallow: /node_modules/
+Disallow: /src/
 Disallow: /build/
 Disallow: /dist/
+Disallow: /.env
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /config/
+Disallow: /assets/uploads/private/
+Disallow: /*?*sessionid=*
 
-# Allow specific important pages
+# ✅ Allow important public pages
 Allow: /services/
 Allow: /portfolio/
 Allow: /gallery/
@@ -31,21 +28,77 @@ Allow: /about/
 Allow: /contact/
 Allow: /projects/
 Allow: /testimonials/
+Allow: /blog/
+Allow: /products/
 
-# Sitemap location
-Sitemap: https://siddivinayakasteel.shop/sitemap.xml
-
-# Crawl-delay for respectful crawling
+# ✅ Crawl-delay for server protection
 Crawl-delay: 1
 
-# Google-specific directives
+# ✅ Sitemap location
+Sitemap: https://siddivinayakasteel.shop/sitemap.xml
+
+# ===============================
+# 🤖 Google Specific Bots
+# ===============================
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
 Crawl-delay: 0
 
-# Bing-specific directives  
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# ===============================
+# 🔎 Bing & Other Search Bots
+# ===============================
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
 Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+
+# ===============================
+# 📱 Social Media Crawlers
+# ===============================
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin/
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+
+User-agent: LinkedInBot
+Allow: /
+Disallow: /admin/
+
+# ===============================
+# ⚠️ Security & Cleanup
+# ===============================
+# Disallow parameter-heavy URLs to prevent duplicate content
+Disallow: /*?replytocom=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?ref=
+Disallow: /*?sort=
+
+# ===============================
+# ✅ End of file
+# ===============================
