@@ -118,7 +118,7 @@ const SEOImage: React.FC<SEOImageProps> = ({
         "@type": "Organization", 
         "name": "Siddhi Vinayak Steel"
       },
-      "acquireLicensePage": "https://siddhivinayaksteel.com/contact",
+      "acquireLicensePage": "https://www.siddivinayakasteel.shop/contact",
       "width": width,
       "height": height
     };
