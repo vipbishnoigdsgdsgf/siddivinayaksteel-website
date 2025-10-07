@@ -48,13 +48,13 @@ export const SEO_CONFIG = {
   businessInfo: {
     name: 'Siddhi Vinayak Steel',
     address: {
-      street: 'Mumbai Industrial Area',
-      city: 'Mumbai',
-      state: 'Maharashtra',
-      postalCode: '400001',
+      street: 'Hyderabad Industrial Area',
+      city: 'Hyderabad',
+      state: 'Telangana ',
+      postalCode: '500098',
       country: 'IN'
     },
-    phone: '+91-9876543210',
+    phone: '+91-9326698359',
     email: 'info@siddhivinayaksteel.com',
     geo: {
       latitude: 19.0760,
@@ -68,52 +68,52 @@ export const SEO_CONFIG = {
 // Page-specific SEO data
 export const PAGE_SEO_DATA: Record<string, SEOPageData> = {
   home: {
-    title: "Siddhi Vinayak Steel - Premium Steel & Glass Solutions | Mumbai's Leading Steel Fabrication Company",
+    title: "Siddhi Vinayak Steel - Premium Steel & Glass Solutions | Hyderabad's Leading Steel Fabrication Company",
     description: "Siddhi Vinayak Steel offers premium steel fabrication, glass installation, stainless steel railings, structural steel work in Mumbai, Maharashtra. 15+ years experience in construction industry. Get instant quotes for steel gates, glass partitions, handrails.",
     keywords: ['steel fabrication', 'glass installation', 'mumbai', 'maharashtra'],
     url: 'https://siddivinayakasteel.shop/',
     type: 'website'
   },
   about: {
-    title: "About Us - 15+ Years of Steel Fabrication Excellence in Mumbai",
-    description: "Learn about Siddhi Vinayak Steel's journey, expertise in steel fabrication, glass installation services in Mumbai. Trusted by 500+ clients for quality steel work, custom fabrication, and professional installation services.",
-    keywords: ['about siddhi vinayak steel', 'steel fabrication company mumbai', 'experienced steel contractor', 'mumbai', 'maharashtra'],
+    title: "About Us - 15+ Years of Steel Fabrication Excellence in Hyderabad",
+    description: "Learn about Siddhi Vinayak Steel's journey, expertise in steel fabrication, glass installation services in Hyderabad. Trusted by 500+ clients for quality steel work, custom fabrication, and professional installation services.",
+    keywords: ['about siddhi vinayak steel', 'steel fabrication company Hyderabad', 'experienced steel contractor', 'Hyderabad', 'Telangana'],
     url: 'https://siddivinayakasteel.shop/about',
     type: 'website'
   },
   services: {
-    title: "Steel Fabrication Services Mumbai - Glass Installation & Stainless Steel Work",
-    description: "Professional steel fabrication, glass installation, stainless steel railings, structural steel work in Mumbai. Custom steel gates, handrails, fencing, glass partitions. Free quotes available.",
-    keywords: ['steel fabrication services', 'glass installation services', 'stainless steel work', 'mumbai', 'maharashtra'],
+    title: "Steel Fabrication Services Hyderabad - Glass Installation & Stainless Steel Work",
+    description: "Professional steel fabrication, glass installation, stainless steel railings, structural steel work in Hyderabad. Custom steel gates, handrails, fencing, glass partitions. Free quotes available.",
+    keywords: ['steel fabrication services', 'glass installation services', 'stainless steel work', 'Hyderabad', 'Telangana'],
     url: 'https://siddivinayakasteel.shop/services',
     type: 'service'
   },
   portfolio: {
     title: "Steel & Glass Projects Portfolio - Mumbai's Premier Fabrication Work",
-    description: "View our portfolio of completed steel fabrication and glass installation projects in Mumbai. Custom steel gates, railings, staircases, glass partitions, commercial and residential projects.",
-    keywords: ['steel projects mumbai', 'glass installation portfolio', 'steel fabrication gallery', 'steel gates', 'handrail installation'],
+    description: "View our portfolio of completed steel fabrication and glass installation projects in Hyderabad. Custom steel gates, railings, staircases, glass partitions, commercial and residential projects.",
+    keywords: ['steel projects Hyderabad', 'glass installation portfolio', 'steel fabrication gallery', 'steel gates', 'handrail installation'],
     url: 'https://siddivinayakasteel.shop/portfolio',
     type: 'website'
   },
   gallery: {
     title: "Steel & Glass Work Gallery - Before & After Project Photos",
-    description: "Browse our gallery of steel fabrication and glass installation projects. High-quality photos of completed steel gates, railings, glass partitions, custom steel work in Mumbai and Maharashtra.",
-    keywords: ['steel work photos', 'glass installation images', 'fabrication gallery mumbai', 'steel contractor mumbai'],
+    description: "Browse our gallery of steel fabrication and glass installation projects. High-quality photos of completed steel gates, railings, glass partitions, custom steel work in Hyderabad and Telangana .",
+    keywords: ['steel work photos', 'glass installation images', 'fabrication gallery Hyderabad', 'steel contractor Hyderabad'],
     url: 'https://siddivinayakasteel.shop/gallery',
     type: 'website'
   },
   contact: {
     title: "Contact Siddhi Vinayak Steel - Get Free Quote for Steel & Glass Work",
-    description: "Contact Siddhi Vinayak Steel for steel fabrication and glass installation services in Mumbai. Get free quotes, schedule consultations, and discuss your steel work requirements. Call now!",
-    keywords: ['contact steel fabricator mumbai', 'free steel quote', 'glass installation inquiry', 'mumbai', 'maharashtra'],
+    description: "Contact Siddhi Vinayak Steel for steel fabrication and glass installation services in Hyderabad. Get free quotes, schedule consultations, and discuss your steel work requirements. Call now!",
+    keywords: ['contact steel fabricator Hyderabad', 'free steel quote', 'glass installation inquiry', 'Hyderabad', 'Telangana'],
     url: 'https://siddivinayakasteel.shop/contact',
     type: 'website'
   },
   testimonials: {
-    title: "Client Testimonials - Steel & Glass Work Reviews Mumbai",
-    description: "Read testimonials from satisfied clients about our steel fabrication and glass installation services. 5-star reviews for quality work, timely delivery, and professional service in Mumbai.",
-    keywords: ['steel fabrication reviews mumbai', 'glass installation testimonials', 'client feedback steel work', 'mumbai', 'maharashtra'],
-    url: 'https://siddivinayakasteel.shop/testimonials',
+    title: "Client Testimonials - Steel & Glass Work Reviews Hyderabad",
+    description: "Read testimonials from satisfied clients about our steel fabrication and glass installation services. 5-star reviews for quality work, timely delivery, and professional service in Hyderabad.",
+    keywords: ['steel fabrication reviews Hyderabad', 'glass installation testimonials', 'client feedback steel work', 'Hyderabad', 'Telangana'],
+    url: 'https://siddivinayakasteel.shop/',
     type: 'website'
   }
 };
