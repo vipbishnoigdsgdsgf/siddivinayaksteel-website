@@ -142,15 +142,15 @@ export const generateStructuredData = (type: string, data: any) => {
       return {
         ...baseStructuredData,
         "name": "Siddhi Vinayak Steel",
-        "description": "Premium steel fabrication and glass installation services in Mumbai",
-        "url": "https://siddhivinayaksteel.com",
-        "telephone": "+91-9876543210",
+        "description": "Premium steel fabrication and glass installation services in Hyderabad",
+        "url": "https://www.siddivinayakasteel.shop/",
+        "telephone": "+91-9326698359",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Mumbai Industrial Area",
-          "addressLocality": "Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400001",
+          "streetAddress": "Hyderabad Industrial Area",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500098",
           "addressCountry": "IN"
         },
         "geo": {
@@ -170,7 +170,7 @@ export const generateStructuredData = (type: string, data: any) => {
           "@type": "LocalBusiness",
           "name": "Siddhi Vinayak Steel"
         },
-        "areaServed": "Mumbai, Maharashtra",
+        "areaServed": "Hyderabad, Telangana",
         ...data
       };
       
@@ -192,7 +192,7 @@ export const generateStructuredData = (type: string, data: any) => {
           "name": "Siddhi Vinayak Steel",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://siddhivinayaksteel.com/logo.png"
+            "url": "https://www.siddivinayakasteel.shop/siddhi-vinayak-logo.png"
           }
         },
         ...data
