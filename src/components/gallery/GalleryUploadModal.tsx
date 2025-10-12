@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useState, useRef } from "react";
 import { toast } from "sonner";
 import { uploadImage } from "@/utils/storage";
