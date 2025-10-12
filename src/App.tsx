@@ -1,5 +1,5 @@
 
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect  } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'sonner';
@@ -55,6 +55,22 @@ const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
 };
 
 function App() {
+  useEffect(() => {
+  const script1 = document.createElement("script");
+  script1.async = true;
+  script1.src = "https://www.googletagmanager.com/gtag/js?id=AW-17621947358";
+  document.head.appendChild(script1);
+
+  const script2 = document.createElement("script");
+  script2.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17621947358');
+  `;
+  document.head.appendChild(script2);
+}, []);
+
 return (
     <HelmetProvider>
       <Router>
