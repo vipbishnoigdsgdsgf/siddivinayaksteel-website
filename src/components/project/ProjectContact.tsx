@@ -1,14 +1,19 @@
-
 import { User, Phone, Mail, MessageCircle, Calendar, Star, MapPin, Clock, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useParams } from "react-router-dom";
 
 export function ProjectContact() {
-  const { id } = useParams<{ id: string }>();
-  
+  // YEH HOOK URL SE ID NIKALEGA.
+  // AGAR URL mein '/gallery/ss-067' hai, to id = 'ss-067'
+  // AGAR URL mein '/gallery/2167f07e-...' hai, to id = '2167f07e-...'
+  const { id } = useParams();
+
   const handleWhatsAppContact = () => {
+    // YEH AUTOMATICALLY SAHI URL BANA DEGA.
+    // 'id' mein jo bhi value hogi (short_id ya uuid), wahi yahan use hogi.
     const projectUrl = `https://siddivinayakasteel.shop/gallery/${id}`;
+    
     const message = `🏗️ *Project Inquiry*\n\nI'm interested in this project: ${projectUrl}\n\nCan you please provide me with:\n✨ Similar design quote\n⏱️ Timeline estimation\n📋 Required materials\n🔧 Installation process\n\nLooking forward to your response!`;
     
     const phoneNumber = "919326698359";
@@ -51,7 +56,7 @@ export function ProjectContact() {
               <div className="h-10 w-10 rounded-xl bg-steel/20 flex items-center justify-center group-hover:bg-steel/30 transition-colors">
                 <User className="h-5 w-5 text-steel" />
               </div>
-              <div className="flex-1">
+              <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Project Manager</p>
                 <p className="text-white font-medium">Siddhi Vinayak Steel Team</p>
               </div>
@@ -61,7 +66,7 @@ export function ProjectContact() {
               <div className="h-10 w-10 rounded-xl bg-green-500/20 flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
                 <Phone className="h-5 w-5 text-green-400" />
               </div>
-              <div className="flex-1">
+              <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Call Now</p>
                 <p className="text-white font-medium hover:text-green-400 transition-colors">+91 9326698359</p>
               </div>
@@ -71,7 +76,7 @@ export function ProjectContact() {
               <div className="h-10 w-10 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
                 <Mail className="h-5 w-5 text-blue-400" />
               </div>
-              <div className="flex-1">
+              <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Email Us</p>
                 <p className="text-white font-medium hover:text-blue-400 transition-colors break-all text-sm">info@siddivinayakasteel.shop</p>
               </div>
@@ -81,7 +86,7 @@ export function ProjectContact() {
               <div className="h-10 w-10 rounded-xl bg-orange-500/20 flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
                 <MapPin className="h-5 w-5 text-orange-400" />
               </div>
-              <div className="flex-1">
+              <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wide">Location</p>
                 <p className="text-white font-medium text-sm">Hyderabad, Telangana</p>
               </div>
