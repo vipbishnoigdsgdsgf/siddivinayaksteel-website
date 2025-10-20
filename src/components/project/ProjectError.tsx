@@ -18,7 +18,7 @@ export function ProjectError({ errorMessage }: ProjectErrorProps) {
           <p className="text-gray-400 mb-8">
             {errorMessage || "The project you're looking for doesn't exist or has been removed."}
           </p>
-          <Link to="/portfolio">
+          <Link to="/gallery">
             <Button className="bg-steel hover:bg-steel-dark text-white">
               Browse Other Projects
             </Button>
