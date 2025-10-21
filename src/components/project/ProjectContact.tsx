@@ -13,6 +13,7 @@ export function ProjectContact() {
     // YEH AUTOMATICALLY SAHI URL BANA DEGA.
     // 'id' mein jo bhi value hogi (short_id ya uuid), wahi yahan use hogi.
     const projectUrl = `https://siddivinayakasteel.shop/gallery/${id}`;
+    const projectUrl = `https://siddivinayakasteel.shop/gallery/${short_id}`;
     
     const message = `🏗️ *Project Inquiry*\n\nI'm interested in this project: ${projectUrl}\n\nCan you please provide me with:\n✨ Similar design quote\n⏱️ Timeline estimation\n📋 Required materials\n🔧 Installation process\n\nLooking forward to your response!`;
     
