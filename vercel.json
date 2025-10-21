@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/gallery/:slug((?!.*-.*-.*-.*).*)",
+      "source": "/gallery/(ss-[0-9]{3})",
       "destination": "https://fcakzjucizdbjjbuelms.supabase.co/functions/v1/resolve-short-id/:slug"
     },
     { 
