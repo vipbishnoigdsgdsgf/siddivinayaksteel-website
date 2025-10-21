@@ -138,7 +138,7 @@ export default function GalleryCard({
   };
   const handleVisitClick = () => {
     // Create WhatsApp message with project details
-    const projectUrl = `https://siddivinayakasteel.shop/gallery/${item.short_id || item.id}`;
+    const projectUrl = `https://siddivinayakasteel.shop/gallery/${item.id}`;
     const message = `🏗️ *Project Details*\n\n*Project ID:* ${item.id}\n*Project Name:* ${item.title}\n*Category:* ${getCategoryLabel(item.category)}\n*Project URL:* ${projectUrl}\n\n✨ *Mujhe same design karna hai*\n\nKya aap mujhe yeh same design kar kar sakte hain? Please quote bataiye.`;
     
     const phoneNumber = "919326698359";
@@ -147,7 +147,7 @@ export default function GalleryCard({
   };
   return <Card className={`bg-dark-300 border-gray-800 overflow-hidden hover:shadow-lg transition-all ${className}`}>
       <div className="relative h-60 overflow-hidden">
-        <Link to={`/gallery/${item.short_id || item.id}`} className="block w-full h-full">
+        <Link to={`/gallery/${item.id}`} className="block w-full h-full">
           <img src={item.image_url} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 cursor-pointer" onError={e => {
           // Fallback if image fails to load
           const target = e.target as HTMLImageElement;
@@ -179,7 +179,7 @@ export default function GalleryCard({
       </div>
       
       <CardContent className="p-4">
-        <Link to={`/gallery/${item.short_id || item.id}`} className="block">
+        <Link to={`/gallery/${item.id}`} className="block">
           <h3 className="font-semibold text-white text-lg mb-1 hover:text-steel transition-colors cursor-pointer">{item.title}</h3>
         </Link>
         
