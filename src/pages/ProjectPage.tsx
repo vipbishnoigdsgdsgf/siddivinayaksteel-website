@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { supabase } from "@/utils/supabaseClient"; // <- make sure this path is correct
+import { supabase } from "@/utils/supabaseUtils"; // <- make sure this path is correct
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
