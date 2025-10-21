@@ -3,7 +3,16 @@ import { supabase } from "../lib/supabase";
 import { PostgrestError } from '@supabase/supabase-js';
 import { TABLE_NAMES } from '../types/database';
 
-// Define better return types for our wrapper functions
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY";
+
+// ✅ Named export (important!)
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+//
+
+Define better return types for our wrapper functions
 export type TableNames = typeof TABLE_NAMES[keyof typeof TABLE_NAMES];
 
 // Create a generic type that works with any data shape
