@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/gallery/:slug((?!.*-.*-.*-.*).*)",
+      "destination": "https://fcakzjucizdbjjbuelms.supabase.co/functions/v1/resolve-short-id/:slug"
+    },
+    { 
+      "source": "/(.*)", 
+      "destination": "/" 
+    }
   ]
 }
