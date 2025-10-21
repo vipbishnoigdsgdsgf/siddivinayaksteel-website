@@ -1,8 +1,7 @@
-
 import { useState, useEffect } from "react";
-import { supabase } from "../lib/supabase";
+import { supabase } from "../lib/supabase"; // <- Check if this path is correct
 
-export function useProjectData(projectId: string) {
+export function useProjectData(projectId: string | null) { // Added | null for safety
   const [project, setProject] = useState<any>(null);
   const [relatedProjects, setRelatedProjects] = useState<any[]>([]);
   const [reviews, setReviews] = useState<any[]>([]);
@@ -11,8 +10,13 @@ export function useProjectData(projectId: string) {
 
   useEffect(() => {
     const fetchProjectData = async () => {
+      // Reset state on new ID
+      setProject(null);
+      setError("");
+      setLoading(true);
+
       if (!projectId) {
-        setError("No project ID provided");
+        // setError("No project ID provided"); // We can remove this to avoid false errors
         setLoading(false);
         return;
       }
@@ -26,12 +30,14 @@ export function useProjectData(projectId: string) {
             profiles:user_id (username, full_name)
           `)
           .eq("id", projectId)
-          .single();
+          .maybeSingle(); // ✅ THE FIX IS HERE
 
         if (projectError) throw projectError;
-        if (!projectData) throw new Error("Project not found");
+        if (!projectData) throw new Error("Project not found"); // This error will now show correctly
 
         setProject(projectData);
+
+        // --- Baaki ka code bilkul same rahega ---
 
         // Fetch related projects (same category but different ID)
         const { data: relatedData, error: relatedError } = await supabase
@@ -41,8 +47,8 @@ export function useProjectData(projectId: string) {
           .neq("id", projectId)
           .limit(3);
 
-        if (relatedError) throw relatedError;
-        setRelatedProjects(relatedData || []);
+        if (relatedError) console.error("Related projects error:", relatedError);
+        else setRelatedProjects(relatedData || []);
 
         // Fetch project reviews
         const { data: reviewsData, error: reviewsError } = await supabase
@@ -51,8 +57,8 @@ export function useProjectData(projectId: string) {
           .eq("project_id", projectId)
           .order("created_at", { ascending: false });
 
-        if (reviewsError) throw reviewsError;
-        setReviews(reviewsData || []);
+        if (reviewsError) console.error("Reviews error:", reviewsError);
+        else setReviews(reviewsData || []);
 
       } catch (err: any) {
         console.error("Error fetching project data:", err);
