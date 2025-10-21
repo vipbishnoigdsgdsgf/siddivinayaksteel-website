@@ -1,19 +1,14 @@
-import { User, Phone, Mail, MessageCircle, Calendar, Star, MapPin, Clock, Award } from "lucide-react";
+import { User, Phone, Mail, MessageCircle, Star, MapPin, Clock, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useParams } from "react-router-dom";
 
 export function ProjectContact() {
-  // YEH HOOK URL SE ID NIKALEGA.
-  // AGAR URL mein '/gallery/ss-067' hai, to id = 'ss-067'
-  // AGAR URL mein '/gallery/2167f07e-...' hai, to id = '2167f07e-...'
   const { id } = useParams();
 
   const handleWhatsAppContact = () => {
-    // YEH AUTOMATICALLY SAHI URL BANA DEGA.
-    // 'id' mein jo bhi value hogi (short_id ya uuid), wahi yahan use hogi.
+    // ✅ FIX: Sirf ye ek line hi zaroori hai.
     const projectUrl = `https://siddivinayakasteel.shop/gallery/${id}`;
-    const projectUrl = `https://siddivinayakasteel.shop/gallery/${short_id}`;
     
     const message = `🏗️ *Project Inquiry*\n\nI'm interested in this project: ${projectUrl}\n\nCan you please provide me with:\n✨ Similar design quote\n⏱️ Timeline estimation\n📋 Required materials\n🔧 Installation process\n\nLooking forward to your response!`;
     
